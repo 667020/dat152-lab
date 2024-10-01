@@ -80,11 +80,13 @@ public class BookService {
 	 * @throws BookNotFoundException
 	 */
 	public void deleteBookById(long id) throws BookNotFoundException {
-		
-		// TODO
+
+		Book book = bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book with id = " + id + "not found"));
+		bookRepository.delete(book);
 
 	}
-	
+
+
 	private Book findBookById(long id) throws BookNotFoundException {
 		
 		Book book = bookRepository.findById(id)
@@ -92,4 +94,6 @@ public class BookService {
 		
 		return book;
 	}
+
+
 }
