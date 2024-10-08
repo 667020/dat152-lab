@@ -46,4 +46,30 @@ public class BookService {
 		return book;
 	}
 
+	public Book updateBook(Book book) throws BookNotFoundException {
+		Book existingBook = findByISBN(book.getIsbn());
+
+		if(existingBook != null){
+			existingBook.setTitle(book.getTitle());
+			existingBook.setAuthors(book.getAuthors());
+
+			return saveBook(existingBook);
+		}else{
+			throw new BookNotFoundException("Book with ISBN= " + book.getIsbn() + "not found" );
+		}
+
+	}
+
+	public void deleteBookByISBN(String isbn) throws BookNotFoundException {
+		Book book = findByISBN(isbn);
+		if(book != null){
+			bookRepository.delete(book);
+		}else{
+			throw new BookNotFoundException("Book with ISBN= " + book.getIsbn() + "not found");
+		}
+	}
+
+	
+
+
 }
