@@ -72,10 +72,6 @@ public class BookController {
 	public ResponseEntity<Void> deleteBook(@PathVariable("isbn") String isbn) throws BookNotFoundException {
 		bookService.deleteBookByISBN(isbn);
 		return ResponseEntity.noContent().build();
-
-
-
-
 	}
 
 

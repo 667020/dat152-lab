@@ -65,8 +65,8 @@ public class AuthorController {
         return new ResponseEntity<>(updateAuthor, HttpStatus.OK);
     }
 
-    @DeleteMapping("/auhtors/{id}")
-    public ResponseEntity<Author> deleteAuthor(@PathVariable("id")) {
+    @DeleteMapping("/authors/{id}")
+    public ResponseEntity<Author> deleteAuthor(@PathVariable("id")Long id) throws AuthorNotFoundException {
         authorService.deleteAuthor(id);
         return ResponseEntity.noContent().build();
 
