@@ -1,0 +1,34 @@
+{
+  "realm" : "DAT152Oblig4",
+  "users" : [ {
+    "id" : "e999f477-dee9-422f-84fb-7da887ab1aae",
+    "createdTimestamp" : 1699005113209,
+    "username" : "user1",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Test",
+    "lastName" : "DAT152-User",
+    "credentials" : [ {
+      "id" : "b4f07eb9-f983-4b26-89b1-bbe33622384d",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1699005132980,
+      "secretData" : "{\"value\":\"Y5uuDmfI40nXCzzgNYPGoZ1zSfIpuG838Qxdf2v9d9k=\",\"salt\":\"roxps7nOwqYGOzbbQ37Lcg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "clientRoles" : {
+      "oblig4" : [ "USER" ]
+    },
+    "clientConsents" : [ {
+      "clientId" : "oblig4",
+      "grantedClientScopes" : [ "email", "profile", "oblig4", "roles", "phone" ],
+      "createdDate" : 1699008555872,
+      "lastUpdatedDate" : 1730721441132
+    } ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
